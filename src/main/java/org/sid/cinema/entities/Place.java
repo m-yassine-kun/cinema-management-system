@@ -5,6 +5,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Collection;
@@ -23,6 +27,7 @@ public class Place  implements Serializable {
     @ManyToOne
     private Salle salle;
     @OneToMany(mappedBy="place")
+    @JsonProperty(access=Access.WRITE_ONLY)
     private Collection<Ticket> tickes;
 
 }

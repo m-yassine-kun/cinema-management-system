@@ -1,5 +1,8 @@
 package org.sid.cinema.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -25,5 +28,6 @@ public class Ticket implements Serializable {
     @ManyToOne
     private Place place;
     @ManyToOne
+    @JsonProperty(access=Access.WRITE_ONLY)
     private Projection projection;
 }
