@@ -64,7 +64,7 @@ public class CinemaInitServiceImpl implements ICinemaInitService{
 
     @Override
     public void initVilles() {
-        Stream.of("Abidjan","Bouaké", "Korhogo","Daloa").forEach(nameVille->{
+        Stream.of("Casablanca","Rabat", "Tanger","Marrakesh","Tétouan").forEach(nameVille->{
             Ville ville = new Ville();
             ville.setName(nameVille);
             villeRepository.save(ville);
