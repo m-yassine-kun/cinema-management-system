@@ -1,6 +1,6 @@
 package org.sid.cinema.service;
 
-public interface ICinemaInitServiceImpl {
+public interface ICinemaInitService {
     public void initVilles();
     public void initCinemas();
     public void initSalles();
